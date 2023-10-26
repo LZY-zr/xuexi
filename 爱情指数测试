@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.Random; // 导入Random类
+
+public class AIqing {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入男生姓名：");
+        String manName = sc.next();
+        System.out.println("请输入女生姓名：");
+        String womenName = sc.next();
+        
+        Random AIqing = new Random();
+        int Love = AIqing.nextInt(100); // 生成随机缘分值
+        
+        System.out.println("产生的缘分值为：" + Love);
+        System.out.println("请输入你对这段缘分的评价（0-100之间的数字）：");
+        int Rose = sc.nextInt();
+        
+        if (Rose >= 90) {
+            System.out.println("佳偶天成，珠联璧合!");
+        } else if (Rose >= 60 && Rose < 90) {
+            System.out.println("幸福一对!");
+        } else if (Rose >= 30 && Rose < 60) {
+            System.out.println("一起努力吧!");
+        } else if (Rose >= 10 && Rose < 30) {
+            System.out.println("赶紧分手吧!");
+        } else {
+            System.out.println("天理不容！");
+        }
+    }
+}
